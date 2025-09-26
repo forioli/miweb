@@ -12,7 +12,7 @@ h3 {
 }
 
 p{
-    font-size: 13px; background-color: brown; color: blanchedalmond;font-family: "Merriweather", serif;padding: 15px;
+    font-size: 13px; background-color: antiquewhite; color: rgb(117,109,110);font-family: "Merriweather", serif;padding: 15px;
 
 } 
 
@@ -33,13 +33,9 @@ li a{
 }
 
 .lista{
-    background-color: antiquewhite
+    background-color: antiquewhite;
 }
 
-
-.navbarbot{
-    display: inline-block;text-decoration: none;background-color: rgb(255, 210, 143);padding: 10px;border-radius: 5px;box-shadow: 20px;
-}
 .footertitle{
     font-family: 'Times New Roman', Times, serif;color: rgb(217,155,88);font-size: 25px;
 }

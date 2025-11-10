@@ -6,13 +6,27 @@ h1 {
 h2 {
     text-align: center;color: rgb(217,155,88); font-size: 36px;  font-family: "times new roman", serif;
 }
+h2 a {
+    all: unset;         
+    cursor: pointer; 
+}
 
 h3 {
     background-color: hsl(32, 88%, 84%); color: rgb(159, 77, 0); size: 28px; font-size: 25px;
 }
 
 p{
-    font-size: 13px; background-color: antiquewhite; color: rgb(117,109,110);font-family: "Merriweather", serif;padding: 15px;
+    font-size: 13px; background-color: antiquewhite; color: rgb(117,109,110);font-family: "Merriweather", serif;padding: 2px;
+
+} 
+
+p a {
+    all: unset;         
+    cursor: pointer; 
+}
+
+.continuereading{
+    font-size: 13px; background-color: rgb(176, 176, 176); color: rgb(54, 54, 54);font-family: "Merriweather", serif;padding: 5px;
 
 } 
 

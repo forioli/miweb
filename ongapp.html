@@ -82,14 +82,14 @@
             }
 
             ul {
-                flex-direction:inherit; /* Cambia de fila a columna */
-                align-items: flex-end;  /* Mantiene alineado a la derecha */
+                flex-direction:inherit; 
+                align-items: flex-end;  
                 flex-direction: column;
                 position: relative;
             }
 
             ul li {
-                margin-bottom: 2px; /* Espaciado entre los links */
+                margin-bottom: 2px; 
                 position: relative;
 
             }
@@ -215,22 +215,18 @@
             <div class="mapa" id="mapa"></div>
         
             <script>
-                // Configuración
                 const TAM = 30;
                 const FILAS = 15;
                 const COLUMNAS = 20;
                 const VELOCIDAD = 5;
         
-                // Elementos
                 const mapa = document.getElementById('mapa');
                 const personaje = document.createElement('div');
                 personaje.className = 'personaje';
         
-                // Estado del jugador
                 let px = 2, py = 12;
                 let vx = 0, vy = 0;
         
-                // Mapa (0 = vacío, 1 = sólido)
                 const datosMapa = [
                     [1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -263,15 +259,12 @@
                     mapa.appendChild(personaje);
                 }
         
-                // Actualizar posición del personaje
                 function actualizarPosicion() {
                     personaje.style.left = (px * TAM + 3) + 'px';
                     personaje.style.top = (py * TAM + 3) + 'px';
                 }
         
-                // Verificar colisión en los 4 lados del cuadrado
                 function hayColision(x, y) {
-                    // Verificar las 4 esquinas del personaje
                     const puntos = [
                         [x, y],           // Esquina superior izquierda
                         [x + 0.8, y],     // Esquina superior derecha
@@ -279,32 +272,25 @@
                         [x + 0.8, y + 0.8] // Esquina inferior derecha
                     ];
                     
-                    // Si cualquier punto colisiona, retornar true
                     return puntos.some(([px, py]) => {
                         const cx = Math.floor(px);
                         const cy = Math.floor(py);
                         
-                        // Verificar límites del mapa
                         if (cx < 0 || cx >= COLUMNAS || cy < 0 || cy >= FILAS) 
                             return true;
                         
-                        // Verificar si es sólido
                         return datosMapa[cy][cx] === 1;
                     });
                 }
         
-                // Bucle principal del juego
                 function actualizarJuego() {
-                    // Calcular nueva posición
                     let nuevoX = px + vx;
                     let nuevoY = py + vy;
                     
-                    // Verificar colisión horizontal
                     if (vx !== 0 && !hayColision(nuevoX, py)) {
                         px = nuevoX;
                     }
                     
-                    // Verificar colisión vertical
                     if (vy !== 0 && !hayColision(px, nuevoY)) {
                         py = nuevoY;
                     }
@@ -313,7 +299,6 @@
                     requestAnimationFrame(actualizarJuego);
                 }
         
-                // Controles
                 document.addEventListener('keydown', (e) => {
                     switch(e.key) {
                         case 'w': case 'W': case 'ArrowUp':    vy = -VELOCIDAD / TAM; break;

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ong App</title>
+    <link rel="icon" type="image/x-icon" href="img/logoong.png">
+    <link rel="stylesheet" href="styleong.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+            height: 50px;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a{
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        nav img{
+            position: absolute;
+            left: 0;
+        }
+
+        .feed{
+            width: 70vw;
+        }
+
+        aside{
+            background-color: antiquewhite;
+            width: 30vw;
+            height: 273vh;
+
+        }
+
+        main{
+            display: flex; flex-direction: column;
+        }
+
+
+
+        .feed li{
+            display: block;
+        }
+
+        @media (max-width: 768px){
+            nav ul{
+                background-color: blue;
+                flex-direction: column;
+                height: 100%;
+            }
+            nav li{
+                height: 100%;
+            }
+            nav a{
+                display: inline-block;
+                width: 100%;
+            }
+            aside{
+                order: -1;
+                width: 100%;
+            }
+            main{
+                flex-direction: column;
+            }
+
+            main ul{
+                position: relative;
+            }
+
+            ul {
+                flex-direction:inherit; /* Cambia de fila a columna */
+                align-items: flex-end;  /* Mantiene alineado a la derecha */
+                flex-direction: column;
+                position: relative;
+            }
+
+            ul li {
+                margin-bottom: 2px; /* Espaciado entre los links */
+                position: relative;
+
+            }
+            .feed{
+                width: 100%;
+            }
+            .secciones{
+                position: relative;
+            }
+                   }
+        footer{
+            background-color: rgb(77, 86, 42);height: 80%;text-align: center
+        }
+        .footertext{
+            font-family: 'Poppins', Times, serif;font-size: 17px;text-align: left;margin: 20px;
+        }
+
+        .footertext:hover{
+            text-decoration: underline;
+        }
+
+        li{
+            display: inline;text-decoration: none;padding: 10px;
+        }
+        h2{
+            margin-bottom: 20px; text-align: left;padding-left: 30px;padding-top: 15px;
+        }
+        p{
+            padding-left: 30px;
+        }
+        .columna{
+            display: inline-block; width: 25vw;height:50%;vertical-align: top;margin: 50px;
+        }
+        .columna li{
+            list-style-type: circle; display: inline-block;
+        }
+        .description{
+            font-size: 13px; color: rgb(48, 48, 48);font-family: "Arial", serif;padding: 20px;
+        }
+
+        .mapa { 
+            display: grid;
+            grid-template-columns: repeat(20, 30px);
+            grid-template-rows: repeat(15, 30px);
+            border: 2px solid rgb(77, 86, 42);
+            margin: 20px 0;
+            position: relative;
+            width: calc(20 * 30px);
+        }
+        .celda { width: 30px; height: 30px; }
+        .vacio { background: transparent; }
+        .solido { background: rgb(77, 86, 42); }
+        .personaje {
+            width: 24px; height: 24px;
+            background: red;
+            position: absolute;
+            transition: 0.1s;
+            
+        }
+        .controles { margin: 10px 0; }
+        .tecla { 
+            background: #eee; 
+            padding: 5px 10px; 
+            margin: 0 2px;
+            border: 1px solid #ccc;
+        }
+        
+        
+
+    </style>
+</head>
+<body style="margin: 0px;background-color: rgb(77, 86, 42);background-size: cover;;background-repeat: no-repeat;background-attachment: fixed;">
+
+    <ul class="secciones">
+        <li>
+            <ul style="
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            ">
+                <li><a href="onglandpage.html" class="barratitle" >Inicio</a></li>            
+                <li><a href="ongnosotros.html" class="barratitle" >Nosotros</a></li>
+                <li><a href="ongproyectos.html" class="barratitle" >Proyectos</a></li>
+                <li><a href="onggaleria.html" class="barratitle" >Galeria</a></li>
+                <li><a href="ongcontacto.html" class="barratitle" >Contacto</a></li>
+                <li><a href="ongaporta.html" class="barratitle" >Aportá un granito</a></li>
+                <li style="margin-left: -35px;"><img src="img/peticon.png" style="width: 20px;"></li>
+            </ul>
+        </li>
+
+        <li>
+            <ul style="
+                display: flex;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+            ">
+                <li><img src="img/logoong4.png" href="onglandpage.html" style="height: 140px;margin: -50px; margin-right: -20px;"></li>            
+
+
+            </ul>
+        </li>
+    </ul>
+
+    <main style="background-color: rgb(238, 242, 194);">
+
+        <section class="feed" style="background-image: url(/img/catdog10.webp);background-size:cover;background-repeat: no-repeat;background-attachment: fixed;background-position: center center;width: 100vw;height: 60vh;">
+            <article>
+                <h1 class="titulobanner2" style="margin-top: 30vh;">Un juego <br>para descontracturar</h1>
+                <ul style="display: flex;">
+            </article>
+        </section> 
+
+        <section style="background-color: rgb(238, 242, 194); margin-left: 25%;">
+            <div class="controles">
+                <p>Usa: <span class="tecla">W</span> <span class="tecla">A</span> <span class="tecla">S</span> <span class="tecla">D</span> para moverte</p>
+            </div>
+        
+            <div class="mapa" id="mapa"></div>
+        
+            <script>
+                // Configuración
+                const TAM = 30;
+                const FILAS = 15;
+                const COLUMNAS = 20;
+                const VELOCIDAD = 5;
+        
+                // Elementos
+                const mapa = document.getElementById('mapa');
+                const personaje = document.createElement('div');
+                personaje.className = 'personaje';
+        
+                // Estado del jugador
+                let px = 2, py = 12;
+                let vx = 0, vy = 0;
+        
+                // Mapa (0 = vacío, 1 = sólido)
+                const datosMapa = [
+                    [1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [0,0,1,0,0,0,0,0,1,0,0,0,1,1,0,0,0,1,1,1],
+                    [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+                    [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+                    [0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+                    [0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0],
+                    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+                    [0,0,0,9,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,1,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+                ];
+        
+                // Crear mapa visual
+                function crearMapa() {
+                    mapa.innerHTML = '';
+                    for (let f = 0; f < FILAS; f++) {
+                        for (let c = 0; c < COLUMNAS; c++) {
+                            const celda = document.createElement('div');
+                            celda.className = `celda ${datosMapa[f][c] === 0 ? 'vacio' : 'solido'}`;
+                            mapa.appendChild(celda);
+                        }
+                    }
+                    actualizarPosicion();
+                    mapa.appendChild(personaje);
+                }
+        
+                // Actualizar posición del personaje
+                function actualizarPosicion() {
+                    personaje.style.left = (px * TAM + 3) + 'px';
+                    personaje.style.top = (py * TAM + 3) + 'px';
+                }
+        
+                // Verificar colisión en los 4 lados del cuadrado
+                function hayColision(x, y) {
+                    // Verificar las 4 esquinas del personaje
+                    const puntos = [
+                        [x, y],           // Esquina superior izquierda
+                        [x + 0.8, y],     // Esquina superior derecha
+                        [x, y + 0.8],     // Esquina inferior izquierda  
+                        [x + 0.8, y + 0.8] // Esquina inferior derecha
+                    ];
+                    
+                    // Si cualquier punto colisiona, retornar true
+                    return puntos.some(([px, py]) => {
+                        const cx = Math.floor(px);
+                        const cy = Math.floor(py);
+                        
+                        // Verificar límites del mapa
+                        if (cx < 0 || cx >= COLUMNAS || cy < 0 || cy >= FILAS) 
+                            return true;
+                        
+                        // Verificar si es sólido
+                        return datosMapa[cy][cx] === 1;
+                    });
+                }
+        
+                // Bucle principal del juego
+                function actualizarJuego() {
+                    // Calcular nueva posición
+                    let nuevoX = px + vx;
+                    let nuevoY = py + vy;
+                    
+                    // Verificar colisión horizontal
+                    if (vx !== 0 && !hayColision(nuevoX, py)) {
+                        px = nuevoX;
+                    }
+                    
+                    // Verificar colisión vertical
+                    if (vy !== 0 && !hayColision(px, nuevoY)) {
+                        py = nuevoY;
+                    }
+                    
+                    actualizarPosicion();
+                    requestAnimationFrame(actualizarJuego);
+                }
+        
+                // Controles
+                document.addEventListener('keydown', (e) => {
+                    switch(e.key) {
+                        case 'w': case 'W': case 'ArrowUp':    vy = -VELOCIDAD / TAM; break;
+                        case 's': case 'S': case 'ArrowDown':  vy = VELOCIDAD / TAM; break;
+                        case 'a': case 'A': case 'ArrowLeft':  vx = -VELOCIDAD / TAM; break;
+                        case 'd': case 'D': case 'ArrowRight': vx = VELOCIDAD / TAM; break;
+                    }
+                });
+        
+                document.addEventListener('keyup', (e) => {
+                    switch(e.key) {
+                        case 'w': case 'W': case 'ArrowUp':
+                        case 's': case 'S': case 'ArrowDown':  vy = 0; break;
+                        case 'a': case 'A': case 'ArrowLeft':
+                        case 'd': case 'D': case 'ArrowRight': vx = 0; break;
+                    }
+                });
+        
+                crearMapa();
+                actualizarJuego();
+            </script>
+        </section>
+
+        <section style="background-color: rgb(238, 242, 194);">
+            <a class="btn-reserva" style="margin-left: 75px;margin-bottom: 20px;margin-left: 43vw;" href="ongaporta.html">Volver atras</a>
+        </section>
+
+        <section style="background-color: rgb(238, 242, 194); ">
+            <img src="img/logoong7.png" alt="Logo Ong Cuatro Patitas" style="height: 40vh;;margin-left: 35vw;margin-top: -60px;">
+        </section>
+
+
+    </main>
+
+    <!-- Aca arranca el footerrr -->
+    <footer>
+        <div class="columna">
+            <a class="footertitle">Mapa de Sitio</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="onglandpage.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongnosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongproyectos.html">Proyectos</a>
+                </li>
+                <li>
+                    <a class="footertext" href="onggaleria.html">Galeria</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongcontacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongaporta.html">Aportá un granito</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Otras Secciones</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px">
+                <li>
+                    <a class="footertext">Aviso de Privacidad</a>
+                </li>
+                <li>
+                    <a class="footertext">Condiciones generales </a>
+                </li>
+                <li>
+                    <a class="footertext">Pie de imprenta</a>
+                </li>
+            </ul>
+            <a href="#"><img src="img/arrow1.png" alt="arrow" style="height: 35px;margin-top: 250px;"></a>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Redes Sociales</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="https://www.instagram.com/#">Instagram</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.whatsapp.com/">WhatsApp</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.facebook.com/">Facebook</a>
+                </li>
+            </ul>
+        </div>
+        <a class="copyright">Copyright © 2025 Fernando Orioli UADE Diseño y Desarrollo Web - Fundación Cuatro Patitas - All rights reserved.</a>
+    </footer>
+    
+</body>
+</html>

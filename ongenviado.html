@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ong Enviado</title>
+    <link rel="icon" type="image/x-icon" href="img/logoong.png">
+    <link rel="stylesheet" href="styleong.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+            height: 50px;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a{
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        nav img{
+            position: absolute;
+            left: 0;
+        }
+
+        .feed{
+            width: 70vw;
+        }
+
+        aside{
+            background-color: antiquewhite;
+            width: 30vw;
+            height: 273vh;
+
+        }
+
+        main{
+            display: flex; flex-direction: column;
+        }
+
+
+
+        .feed li{
+            display: block;
+        }
+
+        @media (max-width: 768px){
+            nav ul{
+                background-color: blue;
+                flex-direction: column;
+                height: 100%;
+            }
+            nav li{
+                height: 100%;
+            }
+            nav a{
+                display: inline-block;
+                width: 100%;
+            }
+            aside{
+                order: -1;
+                width: 100%;
+            }
+            main{
+                flex-direction: column;
+            }
+
+            main ul{
+                position: relative;
+            }
+
+            ul {
+                flex-direction:inherit; /* Cambia de fila a columna */
+                align-items: flex-end;  /* Mantiene alineado a la derecha */
+                flex-direction: column;
+                position: relative;
+            }
+
+            ul li {
+                margin-bottom: 2px; /* Espaciado entre los links */
+                position: relative;
+
+            }
+            .feed{
+                width: 100%;
+            }
+            .secciones{
+                position: relative;
+            }
+                   }
+        footer{
+            background-color: rgb(77, 86, 42);height: 80%;text-align: center
+        }
+        .footertext{
+            font-family: 'Poppins', Times, serif;font-size: 17px;text-align: left;margin: 20px;
+        }
+
+        .footertext:hover{
+            text-decoration: underline;
+        }
+
+        li{
+            display: inline;text-decoration: none;padding: 10px;
+        }
+        h2{
+            margin-bottom: 20px; text-align: left;padding-left: 30px;padding-top: 15px;
+        }
+        p{
+            padding-left: 30px;
+        }
+        .columna{
+            display: inline-block; width: 25vw;height:50%;vertical-align: top;margin: 50px;
+        }
+        .columna li{
+            list-style-type: circle; display: inline-block;
+        }
+        .description{
+            font-size: 13px; color: rgb(48, 48, 48);font-family: "Arial", serif;padding: 20px;
+        }
+        
+        
+
+    </style>
+</head>
+<body style="margin: 0px;background-color: rgb(77, 86, 42);background-size: cover;;background-repeat: no-repeat;background-attachment: fixed;">
+
+    <ul class="secciones"
+        >
+        <li>
+            <ul style="
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            ">
+                <li><a href="onglandpage.html" class="barratitle" >Inicio</a></li>            
+                <li><a href="ongnosotros.html" class="barratitle" >Nosotros</a></li>
+                <li><a href="ongproyectos.html" class="barratitle" >Proyectos</a></li>
+                <li><a href="onggaleria.html" class="barratitle" >Galeria</a></li>
+                <li><a href="ongcontacto.html" class="barratitle" >Contacto</a></li>
+                <li><a href="ongaporta.html" class="barratitleseleccionado" >Aportá un granito</a></li>
+                <li style="margin-left: -35px;"><img src="img/peticon.png" style="width: 20px;"></li>
+            </ul>
+        </li>
+
+        <li>
+            <ul style="
+                display: flex;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+            ">
+                <li><img src="img/logoong4.png" href="onglandpage.html" style="height: 140px;margin: -50px; margin-right: -20px;"></li>            
+
+
+            </ul>
+        </li>
+    </ul>
+
+    <main style="background-color: rgb(238, 242, 194);">
+
+        <section class="feed" style="background-image: url(/img/catdog9.jpg);background-size:cover;background-repeat: no-repeat;background-attachment: fixed;background-position: center center;width: 100vw;">
+            <article>
+                <h1 class="titulobanner">¡Formulario enviado<br>con exito!</h1>
+                <ul style="display: flex;">
+                    <li>
+                        <a href="onglandpage.html" class="btn-reserva" style="margin-bottom: 100px;margin-left: 50px;">
+                            Volver al inicio
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </article>
+        </section> 
+
+    </main>
+
+    <!-- Aca arranca el footerrr -->
+    <footer>
+        <div class="columna">
+            <a class="footertitle">Mapa de Sitio</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="onglandpage.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongnosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongproyectos.html">Proyectos</a>
+                </li>
+                <li>
+                    <a class="footertext" href="onggaleria.html">Galeria</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongcontacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongaporta.html">Aportá un granito</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Otras Secciones</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px">
+                <li>
+                    <a class="footertext">Aviso de Privacidad</a>
+                </li>
+                <li>
+                    <a class="footertext">Condiciones generales </a>
+                </li>
+                <li>
+                    <a class="footertext">Pie de imprenta</a>
+                </li>
+            </ul>
+            <a href="#"><img src="img/arrow1.png" alt="arrow" style="height: 35px;margin-top: 250px;"></a>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Redes Sociales</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="https://www.instagram.com/#">Instagram</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.whatsapp.com/">WhatsApp</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.facebook.com/">Facebook</a>
+                </li>
+            </ul>
+        </div>
+        <a class="copyright">Copyright © 2025 Fernando Orioli UADE Diseño y Desarrollo Web - Fundación Cuatro Patitas - All rights reserved.</a>
+    </footer>
+    
+</body>
+</html>

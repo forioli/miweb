@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ong Proyectos</title>
+    <link rel="icon" type="image/x-icon" href="img/logoong.png">
+    <link rel="stylesheet" href="styleong.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+            height: 50px;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a{
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        nav img{
+            position: absolute;
+            left: 0;
+        }
+
+        .feed{
+            width: 70vw;
+        }
+
+        aside{
+            background-color: antiquewhite;
+            width: 30vw;
+            height: 273vh;
+
+        }
+
+        main{
+            display: flex; flex-direction: column;
+        }
+
+
+
+        .feed li{
+            display: block;
+        }
+
+        @media (max-width: 768px){
+            nav ul{
+                background-color: blue;
+                flex-direction: column;
+                height: 100%;
+            }
+            nav li{
+                height: 100%;
+            }
+            nav a{
+                display: inline-block;
+                width: 100%;
+            }
+            aside{
+                order: -1;
+                width: 100%;
+            }
+            main{
+                flex-direction: column;
+            }
+
+            main ul{
+                position: relative;
+            }
+
+            ul {
+                flex-direction:inherit; /* Cambia de fila a columna */
+                align-items: flex-end;  /* Mantiene alineado a la derecha */
+                flex-direction: column;
+                position: relative;
+            }
+
+            ul li {
+                margin-bottom: 2px; /* Espaciado entre los links */
+                position: relative;
+
+            }
+            .feed{
+                width: 100%;
+            }
+            .secciones{
+                position: relative;
+            }
+                   }
+        footer{
+            background-color: rgb(77, 86, 42);height: 80%;text-align: center
+        }
+        .footertext{
+            font-family: 'Poppins', Times, serif;font-size: 17px;text-align: left;margin: 20px;
+        }
+
+        .footertext:hover{
+            text-decoration: underline;
+        }
+
+        li{
+            display: inline;text-decoration: none;padding: 10px;
+        }
+        h2{
+            margin-bottom: 20px; text-align: left;padding-left: 30px;padding-top: 15px;
+        }
+        p{
+            padding-left: 30px;
+        }
+        .columna{
+            display: inline-block; width: 25vw;height:50%;vertical-align: top;margin: 50px;
+        }
+        .columna li{
+            list-style-type: circle; display: inline-block;
+        }
+        .description{
+            font-size: 13px; color: rgb(48, 48, 48);font-family: "Arial", serif;padding: 20px;
+        }
+        
+        
+
+    </style>
+</head>
+<body style="margin: 0px;background-color: rgb(77, 86, 42);background-size: cover;;background-repeat: no-repeat;background-attachment: fixed;">
+
+    <ul class="secciones"
+        >
+        <li>
+            <ul style="
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            ">
+                <li><a href="onglandpage.html" class="barratitle" >Inicio</a></li>            
+                <li><a href="ongnosotros.html" class="barratitle" >Nosotros</a></li>
+                <li><a href="ongproyectos.html" class="barratitleseleccionado" >Proyectos</a></li>
+                <li><a href="onggaleria.html" class="barratitle" >Galeria</a></li>
+                <li><a href="ongcontacto.html" class="barratitle" >Contacto</a></li>
+                <li><a href="ongaporta.html" class="barratitle" >Aportá un granito</a></li>
+                <li style="margin-left: -35px;"><img src="img/peticon.png" style="width: 20px;"></li>
+            </ul>
+        </li>
+
+        <li>
+            <ul style="
+                display: flex;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+            ">
+                <li><img src="img/logoong4.png" href="onglandpage.html" style="height: 140px;margin: -50px; margin-right: -20px;"></li>            
+
+
+            </ul>
+        </li>
+    </ul>
+
+    <main style="background-color: rgb(238, 242, 194);">
+
+        <section class="feed" style="background-image: url(/img/ong2.avif);background-size:cover;background-repeat: no-repeat;background-attachment: fixed;background-position: center center;width: 100vw;height: 60vh;">
+            <article>
+                <h1 class="titulobanner2" style="margin-top: 30vh;">Nuestros Proyectos</h1>
+                <ul style="display: flex;">
+            </article>
+        </section> 
+
+        <section style="background-color: rgb(238, 242, 194);">
+            <a class="textonpc" style="margin-left: 75px;">Acá te mostramos el corazón de Cuatro Patitas: los proyectos que llevamos adelante día a día. Desde el rescate y la rehabilitación de los casos más urgentes, hasta nuestras campañas masivas de castración que son fundamentales para controlar la población callejera, cada iniciativa es clave. ¡Ponete al día con lo que estamos haciendo, porque en cada proyecto hay un perro o un gato esperando su nueva vida!</a>
+        </section>
+
+
+
+
+        <section class="proyectos-container">
+
+            <article class="proyecto-card">
+                <div class="proyecto-media">
+                    <img src="img/ong1.avif" alt="Imagen del Proyecto Rescate Comunitario">
+                </div>
+                <div class="proyecto-contenido">
+                    <a class="footertitle">Emergencia en Beccar: ¡Dales un Plato Lleno a los Bichos de la Calle!</a>
+                    <a class="textonpc" style="color: whitesmoke;margin-top: 25px;margin-bottom: 20px;">Recuperamos a un grupo grande de perros y gatos de Beccar, San Isidro, que estaban sobreviviendo como podían en la calle. Muchos llegaron deshidratados y con un grado importante de desnutrición. Si bien ya están a salvo con nosotros, la cantidad de bocas que alimentar ahora es gigante. Cada rescate es un éxito, pero también un desafío enorme. Por eso, te pedimos una mano urgente: necesitamos comida balanceada (seca o húmeda) para perros y gatos. Con un kilo que puedas acercar o donar, estás asegurando que estos valientes guerreros de la calle tengan la energía para recuperarse y empezar su nueva vida.</a>
+                    <ul>
+                        <li class="detalles" style="font-size: 10px;">Ubicación: Beccar, San Isidro.</li>
+                        <li class="detalles" style="font-size: 10px;">Impacto: 6 y 8 gatos y perros fueron rescatados.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="proyecto-card">
+                <div class="proyecto-media">
+                    <img src="img/ong3.jpg" alt="Imagen del Proyecto Rescate Comunitario">
+                </div>
+                <div class="proyecto-contenido">
+                    <a class="footertitle">¡Salvamos la Navidad! Rescate de Criadero Ilegal en Hudson, Zona</a>
+                    <a class="textonpc" style="color: whitesmoke;margin-top: 25px;margin-bottom: 20px;"> La semana pasada fue movida y de mucha garra. Gracias al laburo en equipo, logramos entrar y desmantelar un criadero clandestino de perros y gatos en Hudson, Zona Sur. Los bichos estaban en condiciones deplorables, hacinados y sin la atención veterinaria que se merecían. Sacamos a [Número Aproximado] de animalitos de ese infierno. Ahora están bajo nuestro cuidado, recibiendo amor, comida y la atención médica urgente. ¡Necesitamos tu ayuda para bancar su rehabilitación y darles el hogar que soñamos para ellos!.</a>
+                    <ul>
+                        <li class="detalles" style="font-size: 10px;">Ubicación: Hudson, Zona Sur.</li>
+                        <li class="detalles" style="font-size: 10px;">Impacto: 6 perros fueron rescatados de un criadero ilegal.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="proyecto-card">
+                <div class="proyecto-media">
+                    <img src="img/ong5.jpg" alt="Imagen del Proyecto Rescate Comunitario">
+                </div>
+                <div class="proyecto-contenido">
+                    <a class="footertitle">Alarma en La Matanza: Rescate de Perros y Gatos de una Obra Abandonada en Ramos Mejía</a>
+                    <a class="textonpc" style="color: whitesmoke;margin-top: 25px;margin-bottom: 20px;">Activamos el protocolo de emergencia en Ramos Mejía luego de un aviso sobre la presencia de animales en una obra en construcción abandonada. El lugar era un foco de infección y un peligro constante de derrumbe. Nuestro equipo se movilizó de inmediato a La Matanza y, tras una jornada intensa, logramos sacar a varios perros y gatos que se refugiaban entre escombros. Los bichos presentaban desnutrición y sarna, producto de vivir a la intemperie. Ahora están bajo resguardo, con tratamiento veterinario y mucha comida. Necesitamos manos para darles tránsito y bancar los gastos. ¡Cada ayuda es clave para estos sobrevivientes del cemento!</a>
+                    <ul>
+                        <li class="detalles" style="font-size: 10px;">Ubicación: Ramos Mejia, La Matanza.</li>
+                        <li class="detalles" style="font-size: 10px;">Impacto: 11 animales rescatados.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="proyecto-card">
+                <div class="proyecto-media">
+                    <img src="img/ong4.jpeg" alt="Imagen del Proyecto Rescate Comunitario">
+                </div>
+                <div class="proyecto-contenido">
+                    <a class="footertitle">Misión Cumplida en Vte. López: Rescatamos a 18 Gatos de una Casa Abandonada</a>
+                    <a class="textonpc" style="color: whitesmoke;margin-top: 25px;margin-bottom: 20px;">El fin de semana pasado fue de máxima urgencia en Vicente López. Recibimos el aviso de vecinos preocupados por una casa abandonada que se había convertido en el hogar de una colonia grande de gatos, entre jóvenes y adultos. El lugar era un peligro para ellos y para la zona. Gracias a la rápida intervención de nuestro equipo, pudimos rescatar a [Número Aproximado] michis que estaban desnutridos y con problemas respiratorios. Ahora están a salvo, en cuarentena sanitaria, y pronto empezarán su proceso de socialización. Necesitamos mucho apoyo para bancar los tratamientos y la castración de todos. ¡Ayudanos a darles el futuro que se merecen!</a>
+                    <ul>
+                        <li class="detalles" style="font-size: 10px;">Ubicación: Olivos, Vicente López.</li>
+                        <li class="detalles" style="font-size: 10px;">Impacto: 18 gatos rescatados de una casa abandonada.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <a class="vermas" style="text-align: center;">Fin.</a>
+
+        </section>
+
+
+
+        <section style="background-color: rgb(238, 242, 194); ">
+            <img src="img/logoong7.png" alt="Logo Ong Cuatro Patitas" style="height: 40vh;;margin-left: 35vw;margin-top: -60px;">
+        </section>
+
+
+    </main>
+
+    <!-- Aca arranca el footerrr -->
+    <footer>
+        <div class="columna">
+            <a class="footertitle">Mapa de Sitio</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="onglandpage.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongnosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongproyectos.html">Proyectos</a>
+                </li>
+                <li>
+                    <a class="footertext" href="onggaleria.html">Galeria</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongcontacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="footertext" href="ongaporta.html">Aportá un granito</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Otras Secciones</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px">
+                <li>
+                    <a class="footertext">Aviso de Privacidad</a>
+                </li>
+                <li>
+                    <a class="footertext">Condiciones generales </a>
+                </li>
+                <li>
+                    <a class="footertext">Pie de imprenta</a>
+                </li>
+            </ul>
+            <a href="#"><img src="img/arrow1.png" alt="arrow" style="height: 35px;margin-top: 250px;"></a>
+        </div>
+
+        <div class="columna">
+            <a class="footertitle">Redes Sociales</a>
+            <ul style="display: grid;text-align: left;" style="margin-bottom: 20px;">
+                <li>
+                    <a class="footertext" href="https://www.instagram.com/#">Instagram</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.whatsapp.com/">WhatsApp</a>
+                </li>
+                <li>
+                    <a class="footertext" href="https://www.facebook.com/">Facebook</a>
+                </li>
+            </ul>
+        </div>
+        <a class="copyright">Copyright © 2025 Fernando Orioli UADE Diseño y Desarrollo Web - Fundación Cuatro Patitas - All rights reserved.</a>
+    </footer>
+    
+</body>
+</html>
